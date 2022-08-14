@@ -1,0 +1,18 @@
+{
+    // Playlist ID for the custom Watch Later playlist
+    "watch_laterID": "PL6AOIrlqSGRLmTbaMNmg-qRQDN6EDpZew",
+    // Number of maximum expected videos for a YouTuber to post in a day
+    "last_run_multiplier": 3,
+    // Replaces text in videos that YouTube escapes
+    "text_replacement": {
+        "&#39;": "'",
+        "&quot;": "\""
+    },
+    // Avoid adding any videos that contains any of these key phrases
+    "filters": {
+        "Raon": ["Teaser"],
+        "Max Tech": ["Leak", "Coming"],
+        "OdatNurd - Sublime Text Tutorials": ["Live"],
+        "Rushfaster": ["Round Up", "Roundup"]
+    }
+}

@@ -1,15 +1,29 @@
-# Project Name
-> YouTube Link (YTLink, YTL)
+<!-- Filename:      README.md -->
+<!-- Author:        Jonathan Delgado -->
+<!-- Description:   GitHub README -->
 
-## Table of contents
-* [General info](#general-info)
-* [Features](#features)
+<!-- Header -->
+<h2 align="center">YouTube Link (YTLink)</h2>
+<br />
+  <p align="center">
+    Wrapper for <a href="https://developers.google.com/youtube/v3/docs">YouTube v3 API</a>.
+    <br />
+    <br />
+    Status: <em>in progress</em>
+    <!-- Documentation link -->
+    ·<a href="https://stochastic-thermodynamics-in-python.readthedocs.io/en/latest/"><strong>
+        Documentation
+    </strong></a>
+    <!-- Notion Roadmap link -->
+    ·<a href="https://jdelgado-math.notion.site/cc81b64b86f84315baae26fb5c11b29b?v=38d33d92bb08428e89129db35b88eb10"><strong>
+        Notion Roadmap »
+    </strong></a>
+  </p>
+</div>
 
-## General info
-Wrapper for [YouTube v3 API](https://developers.google.com/youtube/v3/docs).
 
 ## Features
 Easily search for YouTube data through ytlink.search. Easily parse Video, Playlist, and Channel information for sorting and filtering videos.
 
 ## Contact
-Created by [@otanan].
+Created by [Jonathan Delgado](https://jdelgado.net/).

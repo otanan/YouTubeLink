@@ -1,0 +1,37 @@
+#------------- Universal settings -------------#
+# Python cache
+__pycache__
+
+# MacOS files
+.DS_STORE
+
+# Build directories for LaTeX and Sphinx
+build
+
+# LaTeX build files
+*.aux
+*.bbl
+*.bcf
+*.blg
+*.fdb_latexmk
+*.fls
+*.log
+*.out
+*.pdfsync
+*.run.xml
+*.synctex.gz
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints
+
+# Egg-info for pip
+*.egg-info
+
+#------------- Project-specific settings -------------#
+# Sensitive files
+client_secrets.json
+api_key.txt
+# Ignore example files
+examples
+# Ignore data specific to my own subscriptions
+channels_data/*

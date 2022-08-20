@@ -6,7 +6,7 @@
 <h2 align="center">YouTube Link (YTLink)</h2>
 <br />
   <p align="center">
-    Scripts that connect to YouTube to pull channel video information and queue them into custom playlists through the YTLink module.
+    Scripts that connect to YouTube to pull channel video information and queue them into custom playlists through the YTLink package.
     <br />
     <br />
     Status: <em>complete</em>

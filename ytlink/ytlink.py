@@ -18,8 +18,6 @@ import urllib.request
 from ytlink.tools.console import *
 import ytlink.error
 #======================== Fields ========================#
-# Load the API_KEY once and store it here
-_API_KEY = None
 
 
 def init_youtube():
@@ -327,12 +325,15 @@ class Channel(YTObj):
 
 def api_key():
     """ Load the API key once. Save it for future usage once loaded. """
-    global _API_KEY
-    if _API_KEY is None:
-        with open(Path(__file__).parent / 'config/api_key.txt', 'r') as f:
-            _API_KEY = f.read()
+    # Load the key for the first time
+    with open(Path(__file__).parent / 'config/api_key.txt', 'r') as f:
+        key = f.read()
 
-    return _API_KEY
+    global api_key
+    # Overwrite this loading function with a simple return of the key
+    api_key = lambda : key
+    # Actually provide the key for this first run
+    return key
 
 
 #======================== Reading ========================#

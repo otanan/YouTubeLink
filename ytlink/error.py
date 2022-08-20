@@ -7,6 +7,7 @@
 #------------- Imports -------------#
 import sys
 import urllib.error
+import googleapiclient.errors
 #--- Custom imports ---#
 from ytlink.tools.console import *
 #======================== Helper ========================#
@@ -36,6 +37,10 @@ def parse(error, url=None, quit=True):
     """
     if isinstance(error, urllib.error.HTTPError):
         if error.code == 403:
+            # Quota exceeded error.
+            _quota_exceeded(quit)
+    elif isinstance(error, googleapiclient.errors.HttpError):
+        if error.status_code == 403:
             # Quota exceeded error.
             _quota_exceeded(quit)
     else:

@@ -295,12 +295,15 @@ class Channel(YTObj):
     def dict(self):
         """ Converts self to JSON for saving. """
         # Convert dictionary of playlists into a dictionary of JSON
-        playlists = {playlist.name: playlist.ID for playlist in self.playlists}
+        playlists_JSON = {
+            playlist.name: playlist.ID 
+            for playlist in self.playlists.values()
+        }
 
         return {
             'name': self.name,
             'ID': self.ID,
-            'playlists': playlists
+            'playlists': playlists_JSON
         }
 
     def uploads(self, max_vids=10, after_date=None, chronological=False):

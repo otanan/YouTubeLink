@@ -41,7 +41,6 @@ def parse(error, url=None, quit=True):
             _quota_exceeded(quit)
     elif isinstance(error, googleapiclient.errors.HttpError):
         if error.status_code == 403:
-            # Quota exceeded error.
             _quota_exceeded(quit)
     else:
         # Unidentified error

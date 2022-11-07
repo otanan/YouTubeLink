@@ -11,8 +11,16 @@
     // Avoid adding any videos that contains any of these key phrases
     "filters": {
         "Raon": ["Teaser"],
-        "Max Tech": ["Leak", "Coming"],
+        "Max Tech": ["Leak", "Camera Test", "Galaxy"],
         "OdatNurd - Sublime Text Tutorials": ["Live"],
-        "Rushfaster": ["Round Up", "Roundup"]
+        "Rushfaster": ["Round Up", "Roundup"],
+        "Austin John Plays": ["Leak"]
+    },
+    // Playlist IDs for custom channel specific watch later playlists
+    // i.e. Raon -> Music to try
+    // Rushfaster -> Backpacks
+    "playlists": {
+        "Raon": "PL6AOIrlqSGRLHRuUPhnsJwCO2jIp6yhKT",
+        "Rushfaster": "PL6AOIrlqSGRLKcRUBRcSZJuj1tsCOMwMa"
     }
 }

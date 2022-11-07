@@ -251,7 +251,7 @@ def main():
 
         # Make a new playlist
         youtube = ytlink.init_youtube()
-        playlist_name = f'{channel.name} to watch'
+        playlist_name = f'Watch: {channel.name}'
         playlist = ytlink.create_playlist(youtube, playlist_name)
         print(f'New playlist: {playlist.url}.')
 

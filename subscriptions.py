@@ -140,7 +140,7 @@ def main():
 
             # Check whether this video should be added to a special playlist
             channel_name = video.channel.name
-            playlist = watch_later_playlist if channel_name not in playlists else ytlink.Playlist.from_ID(playlists[channel_name])
+            playlist = watch_later_playlist if channel_name not in playlists else ytlink.Playlist(f'Custom for playlist for: {channel_name}', playlists[channel_name])
 
             progress.print(
                 f'Adding [emph]{video.link}[/] from {video.channel.link} to '
@@ -149,9 +149,7 @@ def main():
         
             # Skip on testing
             if not _TESTING_FLAG:
-                ytlink.add_video_to_playlist(
-                    youtube, playlist, video
-                )
+                ytlink.add_video_to_playlist(youtube, playlist, video)
             else:
                 # Simulate adding to playlist delay by sleeping
                 time.sleep(0.8)

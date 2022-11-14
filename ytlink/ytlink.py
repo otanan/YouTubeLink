@@ -139,8 +139,13 @@ class Playlist(YTObj):
 
     @staticmethod
     def from_ID(ID):
-        results = search(api='playlists', part='snippet', id=ID)['items'][0]
-        name = results['snippet']['title']
+        results = search(api='playlists', part='snippet', id=ID)['items']
+        if not results:
+            # Empty list returned
+            print(f'No playlist found with ID: {ID}. Playlist could be private.')
+            return Playlist(name='None', ID=ID)
+            
+        name = results[0]['snippet']['title']
         return Playlist(name=name, ID=ID)
 
     @property
@@ -466,6 +471,8 @@ def add_video_to_playlist(youtube, playlist, video):
 def main():
     print('ytlink.py')
     
+    Playlist.from_ID('PL6AOIrlqSGRLHRuUPhnsJwCO2jIp6yhKT')
+
     # print(search(api='search', part='snippet', q='Rushfaster'))
     
     # Get Max Tech videos
